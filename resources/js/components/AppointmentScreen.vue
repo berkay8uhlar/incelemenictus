@@ -3,6 +3,7 @@
       <div v-if="loading">
           loading....
       </div>
+      <!-- BU CONTAINER ICINDE BIR TAKVIM VAR ONU ANASAYFADA RENDER ETMEK ISTIYORUM -->
     <div v-else class="container">
       <div class="row">
         <div class="col-lg-3 col-md-4 border-end">
