@@ -3,8 +3,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <!-- progress bar -->
-          <ul
+          <!-- progress bar SILDIK -->
+          <!-- <ul
             class="nav nav-pills mentor-profile-tabs"
             id="pills-tab"
             role="tablist"
@@ -127,7 +127,7 @@
                 }}</div>
               </button>
             </li>
-          </ul>
+          </ul> -->
           <!-- progress bar end -->
         </div>
         <div class="col-md-12">
@@ -254,7 +254,9 @@
                           v-model="profile.last_name"
                         />
                       </div>
-                      <div class="col-md-6">
+                      <!-- 
+                           BU INPUTLARI SILDIK 
+                        <div class="col-md-6">
                         <label for="" class="text-primary mb-2 mt-4">
                             {{$t('mentor.profile.general.place_holder.father_name')}}
                           </label
@@ -266,6 +268,7 @@
                           v-model="profile.f_name"
                         />
                       </div>
+                   
                       <div class="col-md-6">
                         <label for="" class="text-primary mb-2 mt-4">
                             {{$t('mentor.profile.general.place_holder.cnic')}}
@@ -441,25 +444,34 @@
                           rows="5"
                           placeholder="About Yourself"
                         ></textarea>
-                      </div>
+                      </div> -->
                     </div>
-
-                    <div class="d-flex justify-content-end mt-5">
+                    <!-- BU BUTONU SILDIK FINISHI EKLEDIK-->
+                    <!-- <div class="d-flex justify-content-end mt-5">
                       <button
                         class="btn btn-secondary px-4 text-white"
                         type="submit"
                       >
-                        <!-- Continue -->
-                  {{ $t("mentor.profile.general.btn_continue") }}
+                        {{ $t("mentor.profile.general.btn_continue") }}
                         <i class="fa-solid fa-angles-right ms-1"></i>
                       </button>
-                    </div>
+                    </div> -->
+<button class="btn btn-secondary px-4 text-white"
+                @click="continueDashboard"
+                 type="button">
+             
+                  {{ $t("mentor.profile.general.btn_finish") }}
+
+                  <i class="fa-solid fa-angles-right ms-1"></i>
+                </button>
                   </form>
                 </div>
               </div>
             </div>
-            <!-- educational info  -->
-            <div
+
+
+           <!-- SİLDİĞİMİZ BÖLÜMLER -->
+            <!-- <div
               class="tab-pane fade"
               id="pills-educational"
               role="tabpanel"
@@ -636,7 +648,6 @@
                           >
                            {{$t("mentor.profile.education.place_holder.btn_label")}}
                           </button>
-                          <!-- <input type="file" /> -->
                         </div>
                       </div>
                       <div class="col-md-6 py-4 d-flex justify-content-center align-items-center">
@@ -648,7 +659,6 @@
                   </form>
                 </div>
               </div>
-              <!-- <div class="border-top mt-4"></div> -->
 
               <div class=" mt-5 mb-2">
                 <div
@@ -705,9 +715,6 @@
                   </div>
                   <div class="col-md-2">
                     <div class="action d-flex justify-content-md-end align-items-center h-100">
-                      <!-- <a href="" class="text-primary me-2"
-                        ><i class="fa-solid fa-pen-to-square"></i
-                      ></a> -->
                       <a
                         href="javascript:void(0)"
                         @click="deleteMentorEducation(education.id,index)"
@@ -724,20 +731,17 @@
                     @click="BackGeneralTab"
                  type="button">
                   <i class="fa-solid fa-angles-left me-1"></i>
-                  <!-- Back -->
                   {{ $t("mentor.profile.general.btn_back") }}
                 </button>
 
                 <button class="btn btn-secondary px-4 text-white"
                 @click="continueExperienceTab"
                 type="button">
-                  <!-- Continue -->
                   {{ $t("mentor.profile.general.btn_continue") }}
                   <i class="fa-solid fa-angles-right ms-1"></i>
                 </button>
               </div>
             </div>
-            <!-- Experience Info -->
             <div
               class="tab-pane fade"
               id="pills-experience"
@@ -894,7 +898,6 @@
               </form>
               </div>
               </div>
-              <!-- <div class="border-top mt-4"></div> -->
 
 
 
@@ -943,9 +946,6 @@
                   </div>
                   <div class="col-md-2">
                     <div class="action d-flex justify-content-lg-end align-items-center h-100">
-                      <!-- <a href="" class="text-primary me-2"
-                        ><i class="fa-solid fa-pen-to-square"></i
-                      ></a> -->
                       <a
                         href="javascript:void(0)"
                         @click="deleteMentorExperiences(experience.id,index)"
@@ -961,21 +961,18 @@
                     @click="backEducationTab"
                  type="button">
                   <i class="fa-solid fa-angles-left me-1"></i>
-                  <!-- Back -->
                   {{ $t("mentor.profile.general.btn_back") }}
                 </button>
 
                 <button class="btn btn-secondary px-4 text-white"
                 @click="ContinueSkillTab"
                 type="button">
-                  <!-- Continue -->
                   {{ $t("mentor.profile.general.btn_continue") }}
                   <i class="fa-solid fa-angles-right ms-1"></i>
                 </button>
               </div>
             </div>
 
-            <!-- skills info -->
             <div
               class="tab-pane fade"
               id="pills-skills"
@@ -1107,20 +1104,18 @@
                 @click="continueExperienceTab"
                  type="button">
                   <i class="fa-solid fa-angles-left me-1"></i>
-                  <!-- Back -->
+
                   {{ $t("mentor.profile.general.btn_back") }}
                 </button>
 
                 <button class="btn btn-secondary px-4 text-white"
                 @click="continueBankTab" type="button">
-                  <!-- Continue -->
                   {{ $t("mentor.profile.general.btn_continue") }}
                   <i class="fa-solid fa-angles-right ms-1"></i>
                 </button>
               </div>
             </div>
 
-            <!-- account info -->
             <div
               class="tab-pane fade"
               id="pills-acc"
@@ -1275,20 +1270,20 @@
                 @click="backSkillTab"
                  type="button">
                   <i class="fa-solid fa-angles-left me-1"></i>
-                  <!-- Back -->
+               
                   {{ $t("mentor.profile.general.btn_back") }}
                 </button>
 
                 <button class="btn btn-secondary px-4 text-white"
                 @click="continueDashboard"
                  type="button">
-                  <!-- Finish -->
+             
                   {{ $t("mentor.profile.general.btn_finish") }}
 
                   <i class="fa-solid fa-angles-right ms-1"></i>
                 </button>
               </div>
-            </div>
+            </div> -->
 
 
           </div>
@@ -1973,17 +1968,7 @@ export default {
       formData.append("mentor_id", this.User.user_id);
       formData.append("first_name", this.profile.first_name);
       formData.append("last_name", this.profile.last_name);
-      //   formData.append("email", this.profile.email);
-      formData.append("address", this.profile.address);
       formData.append("father_name", this.profile.f_name);
-      formData.append("cnic", this.profile.cnic);
-      formData.append("gender", this.profile.gender);
-      formData.append("religion", this.profile.religion);
-      formData.append("dob", this.profile.dob);
-      formData.append("occupation", this.profile.occupation);
-      formData.append("country", this.profile.country);
-      formData.append("city", this.profile.city);
-      formData.append("about", this.profile.about);
 
       //   console.log(formData);
       const res = await axios
@@ -1993,7 +1978,6 @@ export default {
         .then((res) => {
           if (res.data.Status) {
             toast.success(res.data.msg);
-            document.getElementById("pills-educational-tab").click();
           }
           if (!res.data.Status) {
             for (const property in res.data.errors) {
