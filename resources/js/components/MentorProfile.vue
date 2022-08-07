@@ -456,9 +456,10 @@
                         <i class="fa-solid fa-angles-right ms-1"></i>
                       </button>
                     </div> -->
+                    <!-- BURADAKI BUTONLA BILGILERI UPDATE EDEMIYORUZ HASAN-->
 <button class="btn btn-secondary px-4 text-white"
                 @click="continueDashboard"
-                 type="button">
+                 type="submit">
              
                   {{ $t("mentor.profile.general.btn_finish") }}
 
