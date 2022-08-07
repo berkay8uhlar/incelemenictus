@@ -69,7 +69,7 @@
 
             ></appointment-book>
         </div>
-
+               <!-- BU TAKVIM YAPISINI RENDER ETMEK ISTIYORUM -->
         <div v-else class="col-lg-9 col-md-8">
           <div class="appointment-pills">
             <div class="row">
@@ -167,8 +167,9 @@
                     </div>
                   </button>
                 </div>
-              </div>
-              <div class="col-xxl-9 col-lg-8">
+              </div> 
+        
+              <div class="col-xxl-9 col-lg-8 berkay">
                 <div
                   class="tab-content p-4 mt-lg-0 mt-4"
                   id="v-pills-tabContent"
